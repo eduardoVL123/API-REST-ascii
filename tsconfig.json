@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es6",                     /* Compila para JavaScript ES6 */
+    "module": "commonjs",                /* Usa o sistema de módulos do Node.js */
+    "lib": ["es6"],                      /* Inclui bibliotecas padrão do ES6 */
+    "rootDir": "src",                    /* Onde está nosso código .ts */
+    "outDir": "dist",                    /* Para onde vai o .js compilado */
+    "allowJs": true,
+    "strict": true,                      /* Ativa checagens estritas */
+    "esModuleInterop": true,             /* Permite 'import express from "express"' */
+    "resolveJsonModule": true,           /* Permite importar arquivos .json */
+    "skipLibCheck": true,                /* Pula a checagem de tipos em 'node_modules' */
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,      
+    "emitDecoratorMetadata": true        
+  },
+  "include": ["src/**/*"] 
+}

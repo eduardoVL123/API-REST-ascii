@@ -1,0 +1,23 @@
+// Define o "motor" do banco de dados (PostgreSQL)
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL") // Pega a URL do arquivo .env
+}
+
+// Define o "gerador" do cliente
+generator client {
+  provider = "prisma-client-js"
+}
+
+// --- NOSSO MODELO DE PRODUTO ---
+// Isso será transformado na tabela 'Produto' no banco
+model Produto {
+  id        Int      @id @default(autoincrement())
+  nome      String
+  preco     Decimal  @db.Decimal(10, 2) // 10 dígitos, 2 casas decimais
+  categoria String
+
+  // Timestamps (boa prática)
+  criadoEm  DateTime @default(now())
+  atualizadoEm DateTime @updatedAt
+}
